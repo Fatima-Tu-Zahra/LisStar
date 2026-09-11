@@ -8575,6 +8575,721 @@ overflow:hidden;
 }
 </style>
 
+<style>
+/* LISSTAR — MOBILE LAYOUT FIX */
+@media (max-width: 900px) {
+
+  /* Use normal page scrolling on mobile */
+  #app {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100%;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  #space {
+    display: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .wrap {
+    width: calc(100% - 32px);
+    max-width: 680px;
+  }
+
+  .wrap *,
+  .about > *,
+  .contact-split > * {
+    min-width: 0;
+  }
+
+  section {
+    padding-top: 64px;
+  }
+
+  /* Header: logo + button, navigation underneath */
+  #header {
+    width: calc(100% - 24px);
+    top: 10px;
+    padding: 10px 14px;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #header .logo {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  #header .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  #header > .btn {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+  }
+
+  #header nav {
+    display: flex;
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  #header nav a {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+
+  /* Hero */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 160px;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 54px);
+    line-height: 1.1;
+  }
+
+  .hero .desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    flex-wrap: wrap;
+  }
+
+  .cta-row {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .cta-row .btn {
+    padding: 13px 18px;
+    font-size: 13px;
+  }
+
+  .hero-visual {
+    width: 88%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .chip {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  /* Statistics: stack instead of horizontal overflow */
+  .trust-ui3 {
+    width: calc(100% - 32px);
+    margin: 36px auto 0;
+    overflow: hidden;
+  }
+
+  .trust-ui3-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    width: 100%;
+    padding: 8px 16px;
+  }
+
+  .trust-ui3-card {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 16px 8px;
+    gap: 12px;
+  }
+
+  .trust-ui3-card + .trust-ui3-card {
+    border-left: 0;
+    border-top: 1px solid rgba(91, 73, 113, 0.15);
+  }
+
+  .trust-ui3-number {
+    font-size: 30px;
+  }
+
+  /* Section headings */
+  .sec-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .sec-head .sub {
+    max-width: 100% !important;
+  }
+
+  h2 {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+
+  /* Services and benefits */
+  #services .svc-grid,
+  #why .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* Projects */
+  #projects {
+    padding: 64px 0;
+  }
+
+  #projects .lis-projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+    gap: 32px;
+  }
+
+  #projects .lis-browser-frame {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  #projects .lis-browser-frame > img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  #projects .lis-float-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: calc(100% - 16px);
+    margin: -28px auto 0;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  #projects .lis-float-card h3 {
+    font-size: 25px;
+  }
+
+  #projects .lis-card-bottom p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  #projects .lis-bubble {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 8px 12px;
+  }
+
+  /* Founder section */
+  #about .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #about .founder-img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+    padding-top: 20px;
+    border-radius: 28px;
+  }
+
+  #about .founder-img > img {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 90% !important;
+    height: auto !important;
+    max-height: 450px;
+    margin: 0 auto;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+
+  #about .plate {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 12px 12px;
+    padding: 16px;
+    min-height: 0;
+    gap: 10px;
+  }
+
+  #about .plate b {
+    font-size: 17px;
+  }
+
+  #about .plate .founder-logo {
+    width: 42px !important;
+    height: 42px !important;
+    flex-shrink: 0;
+  }
+
+  #about .quote-card {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  #about .quote-card .av {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  /* Reviews */
+  #testimonials .testi-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-height: 0;
+    padding: 24px 0;
+  }
+
+  #testimonials .testi {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 28px 22px;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  #testimonials .testi p {
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 100%;
+  }
+
+  #testimonials .client-info {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #testimonials .client-avatar {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+  }
+
+  #testimonials .client-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #testimonials .client-meta {
+    flex: 1;
+  }
+
+  #testimonials .review-sign {
+    margin-left: auto;
+    min-width: 0;
+    max-width: 120px;
+  }
+
+  /* Contact: video above the booking card */
+  #contact .contact-split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  #contact .video-testimonial {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+
+  #contact .cta-stack {
+    min-height: 0;
+  }
+
+  #contact .contact-cta {
+    width: 100%;
+    min-height: 0;
+    padding: 32px 24px;
+    border-radius: 28px;
+  }
+
+  #contact .cta-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #contact .cta-back {
+    display: none;
+  }
+
+  /* Footer */
+  .ls-footer-head {
+    flex-wrap: wrap;
+    padding: 24px 20px;
+  }
+
+  .ls-footer-tagline {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    flex-wrap: wrap;
+  }
+
+  .ls-footer-band {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 22px 18px;
+  }
+
+  .ls-footer .ls-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .ls-footer .ls-footer-nav a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .ls-footer-social {
+    justify-content: center;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .ls-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin: 24px 20px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  #services .svc-grid,
+  #why .why-grid {
+    grid-template-columns: minmax(0, 1fr)) !important;
+  }
+}
+</style>
+
+<style>
+/* MOBILE — HEADER, PROJECTS AND FOOTER */
+@media (max-width: 900px) {
+
+  /* ===== HEADER ===== */
+  #header {
+    position: fixed;
+    left: 12px !important;
+    right: 12px !important;
+    top: 10px;
+    transform: none !important;
+    width: auto !important;
+    max-width: none;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  #header .logo {
+    min-width: 0;
+    gap: 7px;
+    font-size: 19px;
+    white-space: nowrap;
+  }
+
+  #header .logo-img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  #header > .btn {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px 13px !important;
+    font-size: 11px !important;
+    white-space: nowrap;
+    justify-self: end;
+  }
+
+  #header nav {
+    position: static;
+    transform: none;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    order: 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+    gap: 2px;
+  }
+
+  #header nav a {
+    min-width: 0;
+    padding: 9px 0;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ===== PROJECT CARDS ===== */
+  #projects .lis-projects-grid {
+    padding: 0;
+    gap: 28px;
+  }
+
+  #projects .lis-project-item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #projects .lis-browser-frame {
+    height: auto;
+    min-height: 0;
+    border-radius: 20px;
+    overflow: visible;
+  }
+
+  #projects .lis-browser-frame > img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: block;
+    border-radius: 20px;
+  }
+
+  #projects .lis-float-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 18px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  #projects .lis-bubble {
+    margin-bottom: 10px;
+    padding: 7px 11px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  #projects .lis-float-card h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  #projects .lis-card-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  #projects .lis-card-bottom p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  #projects .lis-arrow-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  /* ===== FOOTER ===== */
+  .ls-footer-head {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 26px 18px;
+    min-height: 0;
+  }
+
+  .ls-footer-brand {
+    gap: 12px;
+  }
+
+  .ls-footer-brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ls-footer-brand span {
+    font-size: 40px;
+  }
+
+  .ls-footer-tagline {
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  .ls-footer-star {
+    display: none;
+  }
+
+  .ls-footer-band {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 22px 16px;
+    min-height: 0;
+    border-radius: 24px;
+  }
+
+  .ls-footer-label--nav {
+    order: 0;
+    justify-content: center;
+  }
+
+  .ls-footer-label--nav::after {
+    display: none;
+  }
+
+  .ls-footer .ls-footer-nav {
+    order: 1;
+    position: static;
+    transform: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+    flex: none;
+  }
+
+  .ls-footer .ls-footer-nav a {
+    padding: 10px 8px;
+    min-height: 42px;
+    font-size: 13px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+  }
+
+  .ls-footer .ls-footer-nav a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .ls-footer-social {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 0 0;
+    margin: 0;
+  }
+
+  .ls-footer-social .ls-footer-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .ls-footer-bottom {
+    margin: 20px 18px 0;
+    padding: 18px 0 24px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .ls-footer-bottom p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+</style>
+
+<style>
+/* MOBILE — SMALLER PROJECT GLASS PANELS */
+@media (max-width: 900px) {
+  #projects .lis-float-card {
+    width: calc(100% - 16px);
+    margin: 8px auto 0;
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
+
+  #projects .lis-bubble {
+    padding: 5px 9px;
+    margin-bottom: 7px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  #projects .lis-float-card h3 {
+    font-size: 21px;
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+
+  #projects .lis-card-bottom {
+    grid-template-columns: minmax(0, 1fr) 36px;
+    gap: 10px;
+  }
+
+  #projects .lis-card-bottom p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  #projects .lis-arrow-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  #projects .lis-arrow-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+</style>
+
 </head>
 <body>
 
