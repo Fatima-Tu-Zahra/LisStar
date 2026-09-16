@@ -4,6 +4,8 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" as="image" href="./Hero image.webp" fetchpriority="high">
+<link rel="preload" as="image" href="./Background.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?
@@ -27,8 +29,8 @@ family=Great+Vibes&family=Inter:wght@400;500;600;700&display=swap" rel="styleshe
     --cream:#fff8f5;
     --card:rgba(255,255,255,.58);
     --line:rgba(255,255,255,.9);
-    --bg:url("https://image.qwenlm.ai/public_source/6aae1f8c-bc81-4398-aebf-9727fa1ce5c1/1c251fd4c-c21c-45aa-88bc-174691a868f2.png");
-    --hero:url("https://image.qwenlm.ai/public_source/6aae1f8c-bc81-4398-aebf-9727fa1ce5c1/1ea0fc4d8-8bbd-4935-8ce1-a4ab23e27df7.png");
+    --bg: url("./Background.webp");
+--hero: url("./Hero image.webp");
     --founder:url("https://image.qwenlm.ai/public_source/6aae1f8c-bc81-4398-aebf-9727fa1ce5c1/1556c6833-2e66-4149-bb62-4b12cc2d8d02.png");
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -10297,7 +10299,12 @@ Z
     </div>
     <div class="hero-visual reveal" style="--d:180ms" id="heroVisual">
       <div class="art-frame" id="artFrame">
-        <img src="https://image.qwenlm.ai/public_source/6aae1f8c-bc81-4398-aebf-9727fa1ce5c1/1ea0fc4d8-8bbd-4935-8ce1-a4ab23e27df7.png" alt="Designer illustration">
+        <img
+  src="./Hero image.webp"
+  alt="Designer illustration"
+  fetchpriority="high"
+  loading="eager"
+>
       </div>
       <span class="chip" style="top:6%;left:-4%;animation-delay:0s"><i>🎨</i>UI/UX Design</span>
       <span class="chip" style="top:20%;right:-5%;animation-delay:1.1s"><i></i>Branding</span>
